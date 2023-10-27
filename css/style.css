@@ -1,0 +1,110 @@
+:root {
+    --wom-color: #5a2679;
+    --withe-color: #fff;
+}
+
+* {
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'CreaPro';
+    src: url('../font/CeraPro-BlackItalic.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-section img {
+    margin-top: 8%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.gif-icon {
+    position: fixed;
+    width: 50%;
+    bottom: 4%;
+}
+
+.title {
+    width: 90%;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-family: 'CreaPro', sans-serif;
+    text-align: right;
+    font-size: 9vw;
+    line-height: 8vw;
+    color: var(--wom-color);
+}
+
+.title-2 {
+    width: 90%;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-family: 'CreaPro', sans-serif;
+    text-align: left;
+    font-size: 8vw;
+    line-height: 8vw;
+    color: var(--wom-color);
+}
+
+.title-3 {
+    width: 90%;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-family: 'CreaPro', sans-serif;
+    text-align: center;
+    font-size: 8vw;
+    line-height: 8vw;
+    color: var(--wom-color);
+}
+
+
+.caja {
+    position: absolute;
+    background-color: transparent;
+    width: 50%;
+    margin-top: 15%;
+    margin-left: 25%;
+}
+
+.caja img {
+    width: 100%;
+}
+
+.counter {
+    position: absolute;
+    width: 90%;
+    margin-top: 68%;
+    margin-left: 5%;
+    font-family: 'CreaPro', sans-serif;
+    font-size: 12vw;
+    text-align: center;
+    color: var(--withe-color);
+
+}
+
+.pulse {
+    animation: pulseAnimation 0.5s infinite alternate;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
