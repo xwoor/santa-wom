@@ -7,28 +7,65 @@
     <title>Nuevo WOMer</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/nieve.css">
+
 </head>
 
 <body>
+    <button id="reiniciarBoton" style="display: none;">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99">
+            </path>
+        </svg>
+    </button>
     <div class="header-section">
         <img src="./img/event_icon.svg" alt="titulo">
     </div>
-    <div class="title-3">Ya eres uno más.</div>
-    <a href="codigo.html" class="caja">
+    <div class="title-3">Ya somos <span id="totalWomers"></span>.</div>
+    <a href="#" class="caja">
         <img src="./img/demo_rq.png">
     </a>
-    <!-- <h2 class="counter">50</h2> -->
 
+    <script>
+
+        // Verificar si LocalStorage es compatible con el navegador
+        if (typeof (Storage) !== "undefined") {
+            // Comprobar si el valor ya está en LocalStorage
+            var contador = localStorage.getItem("contador");
+
+            if (contador === null) {
+                // Si el valor no existe en LocalStorage, establecer un valor predeterminado
+                contador = 0;
+            } else {
+                // Si el valor existe en LocalStorage, convertirlo a un número
+                contador = parseInt(contador);
+            }
+
+            // Incrementar el valor del contador
+            contador++;
+
+            // Mostrar el valor del contador
+            console.log("El valor del contador es: " + contador);
+
+            // Guardar el valor actualizado en LocalStorage
+            localStorage.setItem("contador", contador);
+        } else {
+            console.log("LocalStorage no es compatible en este navegador.");
+        }
+        // Mostrar total Womers
+        const totalWomers = document.getElementById('totalWomers')
+        totalWomers.textContent = contador;
+
+        // Tiempo en milisegundos antes de redirigir (ejemplo: 5000ms = 5 segundos)
+        let tiempoRedireccion = 5000;
+
+        setTimeout(function () {
+            // Redirige a la página "index.html" después de X tiempo segundos
+            window.location.href = "index.html";
+        }, tiempoRedireccion);
+    </script>
+    <script src="./js/app.js"></script>
 </body>
-<script>
-    // Tiempo en milisegundos antes de redirigir (ejemplo: 5000ms = 5 segundos)
-    let tiempoRedireccion = 5000;
-
-    setTimeout(function () {
-        // Redirige a la página "index.html" después de X tiempo segundos
-        window.location.href = "index.html";
-    }, tiempoRedireccion);
-</script>
-<script src="./js/app.js"></script>
 
 </html>

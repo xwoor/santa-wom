@@ -96,3 +96,54 @@ for (i = 0; i <= nieve_cantidad; i++) {
 if (browserok) {
     window.onload = initnieve
 }
+
+// Función para reiniciar el juego y el valor en LocalStorage
+function reiniciarJuego() {
+    let confirmacion = confirm("¿Desea reiniciar el juego y borrar la información almacenada?");
+    if (confirmacion) {
+        localStorage.setItem("contador", 0);
+        window.location.reload();// Actualizar la visualización del valor
+    }
+}
+
+document.getElementById("reiniciarBoton").addEventListener("click", reiniciarJuego);
+// Se obtiene el valor del contador actual
+var contador = localStorage.getItem("contador");
+contador = parseInt(contador);
+//Reemplazar imagen por porcentaje
+var imgPorcentaje = document.getElementById('imgPorcentaje')
+// Cambiar el atributo src de la imagen
+if (contador == 0) {
+    imgPorcentaje.src = './img/progreso_0.svg'
+    console.log(contador);
+} else if (contador == 100) {
+    imgPorcentaje.src == './img/progreso_100.svg'
+    console.log(contador);
+} else if (contador >= 90) {
+    imgPorcentaje.src = './img/progreso_90.svg'
+    console.log(contador);
+} else if (contador >= 80) {
+    imgPorcentaje.src = './img/progreso_80.svg'
+    console.log(contador);
+} else if (contador >= 70) {
+    imgPorcentaje.src = './img/progreso_70.svg'
+    console.log(contador);
+} else if (contador >= 60) {
+    imgPorcentaje.src = './img/progreso_60.svg'
+    console.log(contador);
+} else if (contador >= 50) {
+    imgPorcentaje.src = './img/progreso_50.svg'
+    console.log(contador);
+} else if (contador >= 40) {
+    imgPorcentaje.src = './img/progreso_40.svg'
+    console.log(contador);
+} else if (contador >= 30) {
+    imgPorcentaje.src = './img/progreso_30.svg'
+    console.log(contador);
+} else if (contador >= 20) {
+    imgPorcentaje.src = './img/progreso_20.svg'
+    console.log(contador);
+} else {
+    imgPorcentaje.src = './img/progreso_10.svg'
+    console.log(contador);
+}
