@@ -150,6 +150,6 @@ if (contador == 0) {
     imgPorcentaje.src = './img/progreso_10.svg'
     console.log(contador);
 } else {
-    imgPorcentaje.src = './img/progreso_0.svg'
+    imgPorcentaje.src = './img/progreso_10.svg'
     console.log(contador);
 }
