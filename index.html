@@ -44,7 +44,9 @@
     <script>
         var totalWomers = 99;
         var womers = document.getElementById('totalWomers');
-
+        if (isNaN(contador)) {
+            contador = 0; // Si myVariable es NaN, le asignamos un valor predeterminado, como 0
+        }
         womers.textContent = totalWomers - contador;</script>
 </body>
 
