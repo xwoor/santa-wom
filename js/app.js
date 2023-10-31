@@ -91,7 +91,7 @@ function movenieve() {
 }
 
 for (i = 0; i <= nieve_cantidad; i++) {
-    document.write("<span id='s" + i + "' style='position:absolute;top:-" + nieve_cantidadsize + "'>" + nieve_letra + "</span>")
+    document.write("<span id='s" + i + "' style='font-size:2vw;position:absolute;top:-" + nieve_cantidadsize + "'>" + nieve_letra + "</span>")
 }
 if (browserok) {
     window.onload = initnieve
