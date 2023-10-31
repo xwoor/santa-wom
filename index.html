@@ -11,28 +11,40 @@
 </head>
 
 <body>
-
-    <div class="header-section">
-        <button id="reiniciarBoton">
-            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99">
-                </path>
-            </svg>
-        </button>
+    <button id="reiniciarBoton">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99">
+            </path>
+        </svg>
+    </button>
+    <!-- titulo -->
+    <main class="section">
+        <h1 class="ceraPro title wom-pink">Necesitamos de ti <br>
+            y <span id="totalWomers"></span> Womers más
+        </h1>
+        <p class="creaProMedium wom-color subtitle">para hacer felices cientos de niños <br>
+            de escasos recursos esta navidad.
+        </p>
+        <p class="subtitle ceraPro wom-color mt-10">Haz clic en el botón de abajo y sigue <br>
+            los pasos para realizar tu donación
+        </p>
+        <img class="row_down pulse" src="./img/row_down.svg" alt="Flecha abajo">
         <a href="codigo.html">
-            <img src="./img/event_icon.svg" alt="titulo">
+            <img class="img-santa " src="./img/event_icon.svg" alt="titulo">
         </a>
-    </div>
-    <div class="title">META: 100 WOMers <br>donantes</div>
-    <div class="caja ">
-        <img src="./img/gif_icon.svg">
-    </div>
-    <div class="progreso">
+    </main>
+
+    <!-- <div class="progreso">
         <img class="progreso pulse" id="imgPorcentaje">
-    </div>
+    </div> -->
+    <script src="./js/app.js"></script>
+    <script>
+        var totalWomers = 99;
+        var womers = document.getElementById('totalWomers');
+
+        womers.textContent = totalWomers - contador;</script>
 </body>
-<script src="./js/app.js"></script>
 
 </html>

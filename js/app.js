@@ -112,13 +112,16 @@ var contador = localStorage.getItem("contador");
 contador = parseInt(contador);
 //Reemplazar imagen por porcentaje
 var imgPorcentaje = document.getElementById('imgPorcentaje')
+var completado = document.getElementById('completado')
 // Cambiar el atributo src de la imagen
 if (contador == 0) {
     imgPorcentaje.src = './img/progreso_0.svg'
-    console.log(contador);
-} else if (contador == 100) {
-    imgPorcentaje.src == './img/progreso_100.svg'
-    console.log(contador);
+} else if (contador >= 99) {
+    localStorage.setItem("contador", 0);
+    contador = localStorage.getItem("contador");
+    completado.textContent = 'Hemos logrado la meta'
+    imgPorcentaje.src = './img/progreso_100.svg'
+    console.log(contador,);
 } else if (contador >= 90) {
     imgPorcentaje.src = './img/progreso_90.svg'
     console.log(contador);
@@ -143,7 +146,10 @@ if (contador == 0) {
 } else if (contador >= 20) {
     imgPorcentaje.src = './img/progreso_20.svg'
     console.log(contador);
-} else {
+} else if (contador >= 10) {
     imgPorcentaje.src = './img/progreso_10.svg'
+    console.log(contador);
+} else {
+    imgPorcentaje.src = './img/progreso_0.svg'
     console.log(contador);
 }
